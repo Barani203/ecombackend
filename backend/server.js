@@ -9,7 +9,7 @@ import userRouts from './routes/userRouts.js'
 import orderRouts from './routes/orderRouts.js'
 import uploadRouts from './routes/uploadRouts.js'
 // const cors = require("cors");
-import cors from 'cors';
+import cors from 'cors'
 import {notFound, errorHandler} from './middleware/middleWare.js';
 
 
