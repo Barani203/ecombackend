@@ -9,7 +9,7 @@ import userRouts from './routes/userRouts.js'
 import orderRouts from './routes/orderRouts.js'
 import uploadRouts from './routes/uploadRouts.js'
 // const cors = require("cors");
-import cors from 'cors'
+// import cors from 'cors';
 import {notFound, errorHandler} from './middleware/middleWare.js';
 
 
@@ -24,11 +24,7 @@ if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'))
 }
 
-app.use(
-    cors({
-      origin: "*",
-    })
-  );
+
 app.use(express.json())
 
 app.get('/', (req, res)=>{
