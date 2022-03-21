@@ -12,9 +12,7 @@ import uploadRouts from './routes/uploadRouts.js'
 import cors from 'cors';
 import {notFound, errorHandler} from './middleware/middleWare.js';
 
-    cors({
-      origin: "*",
-    })
+
 
 dotenv.config()
 
@@ -26,6 +24,11 @@ if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'))
 }
 
+app.use(
+    cors({
+      origin: "*",
+    })
+  );
 app.use(express.json())
 
 app.get('/', (req, res)=>{
