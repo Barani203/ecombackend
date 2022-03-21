@@ -26,7 +26,7 @@ if(process.env.NODE_ENV === 'development'){
 
 app.use(
     cors({
-      origin: "*",
+      origin: "5000",
     })
   );
 app.use(express.json())
